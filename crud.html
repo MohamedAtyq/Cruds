@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link pour les icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--link pour le style-->
+    <link rel="stylesheet" href="crud.css">
+    <link rel="icon" href="photo/school_students_icon_144607.png">
+    <title>System Eduction</title>
+</head>
+<body>
+     <div class="container">
+        <div class="headr">
+            <h2>Système Scolaire <span>Med.Atyq</span></h2>
+        </div>
+        <div class="content">
+            <div class="inputs">
+                <input type="text" id="cin" placeholder="CIN">
+                <input type="text" id="nom" placeholder="Nom">
+                <input type="text" id="prenom" placeholder="Prenom">
+                <input type="email" id="email" placeholder="Email">
+                <input type="tel" id="tel" placeholder="Télephone">
+                <button id="add"><i class="fa-solid fa-plus"></i> Ajouter</button>
+            </div>
+            <div class="output">
+                <div class="table_head">
+                    <label >count : <span id="nb"></span></label>
+                    <div class="bar_search">
+                        <input type="text" onkeyup="trouve(this.value)" id="search" placeholder="Rechercher">
+                        <button id="search"><i class="fa-solid fa-magnifying-glass"></i> Rechercher</button>
+                    </div>
+                    
+                </div>
+                <table>
+                    <tr>
+                        <th>CIN</th>
+                        <th>NOM</th>
+                        <th>PRENOM</th>
+                        <th>EMAIL</th>
+                        <th>TELEPHONE</th>
+                        <th>ACTION</th>
+                    </tr>
+                    <tbody id="contents">
+                        
+                    </tbody>
+                </table>
+             </div>
+        </div>
+     </div>
+    <!-- pour script js -->
+    <script src="crud.js"></script>
+</body>
+</html>
